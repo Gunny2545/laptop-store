@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-sm navbar-dark bg-success">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          Store
+          Laptop Store
         </NavLink>
         <button
           className="navbar-toggler d-lg-none"
