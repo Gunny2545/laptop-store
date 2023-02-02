@@ -12,10 +12,17 @@ const create = (product) => {
   return http.post("/product", product);
 }
 
+const addReview = (id, review) => {
+  console.log(`/product/${id}`);
+  console.log(review)
+  return http.patch(`/product/${id}`, review)
+}
+
 const ProductService = {
   getAll,
   get,
-  create
+  create,
+  addReview
 }
 
 export default ProductService 

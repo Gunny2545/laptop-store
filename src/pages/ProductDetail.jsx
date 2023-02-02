@@ -12,7 +12,26 @@ const ProductDetail = () => {
     useEffect(()=>{
         fetchProduct()
     },[])
-
+    let id = params.id;
+    let [review, setReview] = useState({});
+    
+    const saveReview = (e) => {
+            e.preventDefault();
+            console.log(review)
+            ProductService.addReview(id, review)
+                .then((res) => {
+                    fetchProduct()
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        }
+    
+    const handleInputChange = event => {
+            const { name, value } = event.target;
+            setReview({ ...review, [name]: value });
+     };
+    
     const fetchProduct = () => {
         ProductService.get(params.id)
           .then((res) => {
@@ -69,6 +88,31 @@ const ProductDetail = () => {
       <div className="row mt-2">
         <h2>Reviews of This Product</h2>
         <hr />
+        <div className="col">
+                    <div class="container">
+                        <form onSubmit={saveReview}>
+                            <div className="mb-3 row">
+                                <label htmlFor="inputName" className="col-2 col-form-label">Add your review</label>
+                                <div className="col-2">
+                                    <select class="form-select" name="star" id="star" onChange={handleInputChange} required>
+                                        <option value="">-Select-</option>
+                                        {
+                                            [5, 4, 3, 2, 1].map((s) => (
+                                                <option value={s}>{s}</option>
+                                            ))
+                                        }
+                                    </select>
+                                </div>
+                                <div className="col-6">
+                                    <input type="text" className="form-control" name="comment" id="comment" placeholder="Comment" onChange={handleInputChange} />
+                                </div>
+                                <div className="col-2">
+                                    <button type="submit" className="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
         { product.reviews && 
           product.reviews.map((r)=>(
             <div className="alert alert-info">
