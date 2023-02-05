@@ -12,6 +12,7 @@ const ProductDetail = () => {
     useEffect(()=>{
         fetchProduct()
     },[])
+    
     let id = params.id;
     let [review, setReview] = useState({});
     
