@@ -3,7 +3,6 @@ import MainLayout from '../layouts/MainLayout';
 import ProductService from '../services/ProductService';
 import { NavLink } from 'react-router-dom';
 import logo from "../logo.svg";
-import swal from 'sweetalert';
 
 const Product = () => {
   const [products, setProducts] = useState([]);

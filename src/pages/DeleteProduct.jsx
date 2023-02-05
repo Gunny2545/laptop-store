@@ -41,7 +41,7 @@ const DeleteProduct = () => {
 
   return (
     <MainLayout>
-      <button onClick={deleteProduct}>Delete</button>
+        <button onClick={deleteProduct}>Delete</button>
     </MainLayout>
   );
 };
