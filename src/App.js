@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Product from './pages/Product';
 import ProductDetail from './pages/ProductDetail';
 import NewProduct from './pages/NewProduct';
+import EditProduct from './pages/EditProduct';
+import DeleteProduct from './pages/DeleteProduct';
+
 function App() {
   return (
     <Routes>
@@ -11,8 +14,8 @@ function App() {
       <Route path='/product' element={<Product/>}/>
       <Route path='/product/new' element={<NewProduct/>}/>
       <Route path='/product/:id' element={<ProductDetail/>}/>
-      <Route path='/product/edit/:id' element={<Product/>}/>
-      <Route path='/product/delete/:id' element={<Product/>}/>
+      <Route path='/product/edit/:id' element={<EditProduct/>}/>
+      <Route path='/product/delete/:id' element={<DeleteProduct/>}/>
     </Routes>
   );
 }

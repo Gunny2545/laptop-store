@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import ProductService from '../services/ProductService';
 import { NavLink } from 'react-router-dom';
 import logo from "../logo.svg";
+import swal from 'sweetalert';
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -20,9 +21,10 @@ const Product = () => {
       console.log(e);
     });
   }
+
   return (
     <MainLayout>
-        <h1 className="mt-3">Product</h1>
+        <h2 className="mt-3">Product</h2>
         <hr />
         <div className="row">
         <div className="col d-flex justify-content-end">
@@ -54,13 +56,19 @@ const ProductList = (props) => {
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, saepe!</p>
             <h5>฿ {props.product.price}</h5>
             <h6>in stock : {props.product.unit_in_stock}</h6>
-            <NavLink to={'/product/' + props.product.
-            _id} className="btn btn-primary">
+            {/* <NavLink to={'/product/' + props.product._id} className="btn btn-primary">
               Learn More
-            </NavLink>{' '}
+            </NavLink>{' '} */}
             <NavLink to={'/product/' + props.product._id} className="btn btn-success">
               Buy Now
-            </NavLink>
+            </NavLink>{' '}
+            <NavLink to={'/product/edit/' + props.product._id} className="btn btn-warning">
+              Edit
+            </NavLink>{' '}
+            <hr />
+            <NavLink to={'/product/delete/' + props.product._id} className="btn btn-danger">
+              Delete
+            </NavLink>{' '}
           </div>
         </div>
       </div>

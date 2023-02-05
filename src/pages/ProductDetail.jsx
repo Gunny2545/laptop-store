@@ -45,7 +45,7 @@ const ProductDetail = () => {
       }
   return (
     <MainLayout>
-        <h1 className="mt-3">{product.brand}</h1>
+        <h2 className="mt-3">{product.brand}</h2>
         <div className="row mt-3">
         <div className="col-md-4">
           <img src={logo} alt="" />

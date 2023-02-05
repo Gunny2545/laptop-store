@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 const Home = () => {
   return (
     <MainLayout>
-        <h1 className="mt-3">Home</h1>
+        <h2 className="mt-3">Home</h2>
         <hr />
     </MainLayout>
   )
