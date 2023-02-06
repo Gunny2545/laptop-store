@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import MainLayout from '../layouts/MainLayout'
 import ProductService from '../services/ProductService'
 import swal from 'sweetalert'
+import Product from './Product'
 
 const DeleteProduct = () => {
   let navigate = useNavigate();
@@ -32,21 +33,27 @@ const DeleteProduct = () => {
               icon: "error",
             });
           });
-      } else {
-        swal("The product is safe!");
-      }
-    });
-  };
+        } else {
+          swal("The product is safe!", {
+            icon: "success",
+          });
+          navigate("/product");
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+        swal("Cancel failed!", {
+          icon: "error",
+        });
+      });
+    };
 
   useEffect(() => {
     deleteProduct();
   }, []);
 
   return (
-    <MainLayout>
-        <h2 className="mt-3">Delete product</h2>
-        <hr />
-    </MainLayout>
+    <Product/>
   );
 };
 
