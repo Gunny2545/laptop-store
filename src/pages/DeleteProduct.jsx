@@ -9,8 +9,7 @@ const DeleteProduct = () => {
   let params = useParams();
   let id = params.id;
 
-  const deleteProduct = (e) => {
-    e.preventDefault();
+  const deleteProduct = () => {
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this product!",
@@ -39,9 +38,14 @@ const DeleteProduct = () => {
     });
   };
 
+  useEffect(() => {
+    deleteProduct();
+  }, []);
+
   return (
     <MainLayout>
-        <button onClick={deleteProduct}>Delete</button>
+        <h2 className="mt-3">Delete product</h2>
+        <hr />
     </MainLayout>
   );
 };
