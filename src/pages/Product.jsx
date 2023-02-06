@@ -55,9 +55,9 @@ const ProductList = (props) => {
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, saepe!</p>
             <h5>฿ {props.product.price}</h5>
             <h6>in stock : {props.product.unit_in_stock}</h6>
-            {/* <NavLink to={'/product/' + props.product._id} className="btn btn-primary">
+            <NavLink to={'/product/' + props.product._id} className="btn btn-primary">
               Learn More
-            </NavLink>{' '} */}
+            </NavLink>{' '}
             <NavLink to={'/product/' + props.product._id} className="btn btn-success">
               Buy Now
             </NavLink>{' '}

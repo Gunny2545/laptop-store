@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import MainLayout from '../layouts/MainLayout'
 import ProductService from '../services/ProductService'
 import swal from 'sweetalert'
 import Product from './Product'
