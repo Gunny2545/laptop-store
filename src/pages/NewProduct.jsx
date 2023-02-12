@@ -36,7 +36,7 @@ const NewProduct = () => {
 
   return (
     <MainLayout>
-        <h1 className="mt-3">Add a new product</h1>
+        <h2 className="mt-3">Add a new product</h2>
         <hr />
         <div className="row">
             <div classname="col-md-8 offset-md-2">

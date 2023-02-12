@@ -6,6 +6,7 @@ import NewProduct from './pages/NewProduct';
 import EditProduct from './pages/EditProduct';
 import DeleteProduct from './pages/DeleteProduct';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/product/edit/:id' element={<EditProduct/>}/>
       <Route path='/product/delete/:id' element={<DeleteProduct/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
     </Routes>
   );
 }

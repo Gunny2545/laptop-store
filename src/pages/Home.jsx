@@ -9,6 +9,9 @@ const Home = () => {
         <hr />
         <div className="row">
         <div className="col d-flex justify-content-end">
+          <NavLink to="/register" className="btn btn-success">
+            Register
+          </NavLink>{' '}
           <NavLink to="/login" className="btn btn-success">
             Login
           </NavLink>

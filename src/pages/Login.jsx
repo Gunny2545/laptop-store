@@ -21,11 +21,13 @@ const Login = () => {
                 if (res.data.success) {
                     swal("You are logged in.", {
                         icon: "success",
+                        title: "Result"
                       });
                     navigate('/product')
                     } else{
                         swal("Bad login. Please try again.", {
                             icon: "warning",
+                            title: "Result"
                           });
                     }
                     console.log(res.data)
@@ -34,15 +36,16 @@ const Login = () => {
             .catch((err)=>{
                 swal("Bad login. Please try again.", {
                     icon: "warning",
+                    title: "Result"
                   });
                 console.log(err);
             })
     }
   return (
     <MainLayout>
-      <div className="row mt-3">
-        <h2 className="text-center">Login</h2>
+        <h2 className="mt-3">Login</h2>
         <hr />
+        <div className="row">
         <div className="col-md-6 offset-md-3">
           <form onSubmit={doLogin}>
             <div className="mb-3 row">

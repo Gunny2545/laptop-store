@@ -8,9 +8,14 @@ const register = (userData)=>{
   return http.post("/user/register", userData);
 }
 
+const create = (data) => {
+  return http.post("/user/register", data);
+};
+
 const UserService = {
     login,
-    register
+    register,
+    create
 }
 
 export default UserService
