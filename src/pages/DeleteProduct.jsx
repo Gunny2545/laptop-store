@@ -31,6 +31,7 @@ const DeleteProduct = () => {
             swal("Delete failed!", {
               icon: "error",
             });
+            navigate("/product");
           });
         } else {
           swal("The product is safe!", {
@@ -44,6 +45,7 @@ const DeleteProduct = () => {
         swal("Cancel failed!", {
           icon: "error",
         });
+        navigate("/product");
       });
     };
 
