@@ -33,9 +33,9 @@ const Product = () => {
         </div>
       </div>
       <div className="row mt-2 row-cols-lg-4 row-cols-3 g-2">
-        {products.map((p) => (
-          <ProductList product={p}/>
-        ))}
+      {products.map((p) => (
+      <ProductList key={p._id} product={p}/>
+      ))}
       </div>
       
     </MainLayout>

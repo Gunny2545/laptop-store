@@ -40,7 +40,7 @@ const Register = () => {
         <h2 className="mt-3">Register</h2>
         <hr />
         <div className="row">
-            <div classname="col-md-8 offset-md-2">
+            <div className="col-md-8 offset-md-2">
                 <div className="container">
                     <form onSubmit={saveRegister}>
                     <div className="mb-3 row">
@@ -61,16 +61,14 @@ const Register = () => {
                         </div>
                     </div>
 
-                        <div className="mb-3 row">
+                    <div className="mb-3 row">
                             <label htmlFor="password" className="col-4 col-form-label">Password</label>
                             <div className="col-8">
-                                <input type="text" className="form-control" 
+                                <input type="password" className="form-control" 
                                 name="password" 
                                 id="password" placeholder="password" onChange={handleInputChange} />
                             </div>
                         </div>
-
-
 
                     <div className="mb-3 row">
                         <label htmlFor="inputName" className="col-4 col-form-label">Phone number</label>

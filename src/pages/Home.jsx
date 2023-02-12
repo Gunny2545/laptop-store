@@ -11,7 +11,7 @@ const Home = () => {
         <div className="col d-flex justify-content-end">
           <NavLink to="/register" className="btn btn-success">
             Register
-          </NavLink>{' '}
+          </NavLink>&nbsp;
           <NavLink to="/login" className="btn btn-success">
             Login
           </NavLink>
