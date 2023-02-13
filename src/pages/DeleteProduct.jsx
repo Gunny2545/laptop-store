@@ -9,7 +9,7 @@ const DeleteProduct = () => {
   let params = useParams();
   let id = params.id;
 
-  const deleteProduct = () => {
+  const deleteProduct = (currentPage) => {
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this product!",
@@ -24,20 +24,20 @@ const DeleteProduct = () => {
             swal("The product has been deleted!", {
               icon: "success",
             });
-            navigate("/product");
+            navigate(currentPage);
           })
           .catch((e) => {
             console.log(e);
             swal("Delete failed!", {
               icon: "error",
             });
-            navigate("/product");
+            navigate(currentPage);
           });
         } else {
           swal("The product is safe!", {
             icon: "success",
           });
-          navigate("/product");
+          navigate(currentPage);
         }
       })
       .catch((e) => {
@@ -45,9 +45,10 @@ const DeleteProduct = () => {
         swal("Cancel failed!", {
           icon: "error",
         });
-        navigate("/product");
+        navigate(currentPage);
       });
     };
+
 
   useEffect(() => {
     deleteProduct();

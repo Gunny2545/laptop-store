@@ -23,7 +23,25 @@ const Product = () => {
 
   return (
     <MainLayout>
-        <h2 className="mt-3">Product</h2>
+      <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/product">
+                Laptop
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/mouse">
+                Mouse
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+        <h2 className="mt-3">Laptop</h2>
         <hr />
         <div className="row">
         <div className="col d-flex justify-content-end">
@@ -34,7 +52,7 @@ const Product = () => {
       </div>
       <div className="row mt-2 row-cols-lg-4 row-cols-3 g-2">
       {products.map((p) => (
-      <ProductList key={p._id} product={p}/>
+    <ProductList key={p._id} product={p}/>
       ))}
       </div>
       
@@ -52,7 +70,7 @@ const ProductList = (props) => {
           <div className="card-text">
             <h5>{props.product.brand}</h5>
             <h6>{props.product.model}</h6><hr />
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, saepe!</p>
+            <p>{props.product.processor} , {props.product.memory} , {props.product.storage}</p>
             <h5>฿ {props.product.price}</h5>
             <h6>in stock : {props.product.unit_in_stock}</h6>
             <NavLink to={'/product/' + props.product._id} className="btn btn-primary">

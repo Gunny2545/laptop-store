@@ -55,7 +55,7 @@ const EditProduct = () => {
         <h2 className="mt-3">Edit product</h2>
         <hr />
         <div className="row">
-            <div classname="col-md-8 offset-md-2">
+            <div className="col-md-8 offset-md-2">
                 <div className="container">
                     <form onSubmit={saveProduct}>
                     <div className="mb-3 row">
