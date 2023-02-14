@@ -9,6 +9,7 @@ import NewMouse from './pages/NewMouse';
 import EditProduct from './pages/EditProduct';
 import EditMouse from './pages/EditMouse';
 import DeleteProduct from './pages/DeleteProduct';
+import DeleteMouse from './pages/DeleteMouse';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -22,6 +23,7 @@ function App() {
       <Route path='/product/edit/:id' element={<EditProduct/>}/>
       <Route path='/mouse/edit/:id' element={<EditMouse/>}/>
       <Route path='/product/delete/:id' element={<DeleteProduct/>}/>
+      <Route path='/mouse/delete/:id' element={<DeleteMouse/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/mouse' element={<Mouse/>}/>

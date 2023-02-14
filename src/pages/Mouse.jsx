@@ -83,7 +83,7 @@ const Mouse = () => {
                 Edit
               </NavLink>{' '}
               <hr />
-              <NavLink to={'/product/delete/' + props.product._id} className="btn btn-danger">
+              <NavLink to={'/mouse/delete/' + props.product._id} className="btn btn-danger">
                 Delete
               </NavLink>{' '}
             </div>

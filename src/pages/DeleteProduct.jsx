@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import ProductService from '../services/ProductService'
 import swal from 'sweetalert'
@@ -9,7 +9,7 @@ const DeleteProduct = () => {
   let params = useParams();
   let id = params.id;
 
-  const deleteProduct = (currentPage) => {
+  const deleteProduct = () => {
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this product!",
@@ -24,31 +24,30 @@ const DeleteProduct = () => {
             swal("The product has been deleted!", {
               icon: "success",
             });
-            navigate(currentPage);
+            navigate('/product');
           })
           .catch((e) => {
             console.log(e);
             swal("Delete failed!", {
               icon: "error",
             });
-            navigate(currentPage);
+            navigate('/product');
           });
-        } else {
-          swal("The product is safe!", {
-            icon: "success",
-          });
-          navigate(currentPage);
-        }
-      })
-      .catch((e) => {
-        console.log(e);
-        swal("Cancel failed!", {
-          icon: "error",
+      } else {
+        swal("The product is safe!", {
+          icon: "success",
         });
-        navigate(currentPage);
+        navigate('/product');
+      }
+    })
+    .catch((e) => {
+      console.log(e);
+      swal("Cancel failed!", {
+        icon: "error",
       });
-    };
-
+      navigate('/product');
+    });
+  };
 
   useEffect(() => {
     deleteProduct();
