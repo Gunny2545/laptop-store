@@ -5,47 +5,46 @@ import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 const Login = () => {
-    const navigate = useNavigate();
-    let [loginData, setLoginData] = useState({});
+  const navigate = useNavigate();
+  let [loginData, setLoginData] = useState({});
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setLoginData({ ...loginData, [name]: value });
-      };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
 
-    const doLogin = (e) => {
-        e.preventDefault();
-        console.log(loginData)
-        UserService.login(loginData)
-            .then((res)=>{
-                if (res.data.success) {
-                    swal("You are logged in.", {
-                        icon: "success",
-                        title: "Result"
-                      });
-                    navigate('/product')
-                    } else{
-                        swal("Bad login. Please try again.", {
-                            icon: "warning",
-                            title: "Result"
-                          });
-                    }
-                    console.log(res.data)
-                }
-            )
-            .catch((err)=>{
-                swal("Bad login. Please try again.", {
-                    icon: "warning",
-                    title: "Result"
-                  });
-                console.log(err);
-            })
-    }
+  const doLogin = (e) => {
+    e.preventDefault();
+    console.log(loginData);
+    UserService.login(loginData)
+      .then((res) => {
+        if (res.data.success) {
+          swal("You are logged in.", {
+            icon: "success",
+            title: "Result",
+          });
+          navigate("/");
+        } else {
+          swal("Bad login. Please try again.", {
+            icon: "warning",
+            title: "Result",
+          });
+        }
+        console.log(res.data);
+      })
+      .catch((err) => {
+        swal("Bad login. Please try again.", {
+          icon: "warning",
+          title: "Result",
+        });
+        console.log(err);
+      });
+  };
   return (
     <MainLayout>
-        <h2 className="mt-3">Login</h2>
-        <hr />
-        <div className="row">
+      <h2 className="mt-3">Login</h2>
+      <hr />
+      <div className="row">
         <div className="col-md-6 offset-md-3">
           <form onSubmit={doLogin}>
             <div className="mb-3 row">

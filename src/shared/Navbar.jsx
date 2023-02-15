@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -25,29 +26,46 @@ const Navbar = () => {
                 Home <span className="visually-hidden">(current)</span>
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/product">
+            <li className="nav-item dropdown">
+              <NavLink
+                className="nav-link dropdown-toggle"
+                id="productDropdownId"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                to="/product"
+              >
                 Product
               </NavLink>
+              <ul className="dropdown-menu" aria-labelledby="productDropdownId">
+                <li>
+                  <NavLink className="dropdown-item" to="/product">
+                  ▸ Laptop
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/mouse">
+                  ▸ Mouse
+                  </NavLink>
+                </li>
+              </ul>
             </li>
+
             <li className="nav-item dropdown">
-              <a
+              <span
                 className="nav-link dropdown-toggle"
-                href="#"
                 id="dropdownId"
                 data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
               >
-                Other
-              </a>
+                User
+              </span>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
-                <a className="dropdown-item" href="#">
-                  Action 1
-                </a>
-                <a className="dropdown-item" href="#">
-                  Action 2
-                </a>
+                <NavLink className="dropdown-item" to="/login">
+                ▸ Login
+                </NavLink>
+                <NavLink className="dropdown-item" to="/register">
+                ▸ Register
+                </NavLink>
               </div>
             </li>
           </ul>
