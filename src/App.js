@@ -1,17 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Product from './pages/Product';
-import Mouse from './pages/Mouse';
-import ProductDetail from './pages/ProductDetail';
-import MouseDetail from './pages/MouseDetail';
-import NewProduct from './pages/NewProduct';
-import NewMouse from './pages/NewMouse';
-import EditProduct from './pages/EditProduct';
-import EditMouse from './pages/EditMouse';
-import DeleteProduct from './pages/DeleteProduct';
-import DeleteMouse from './pages/DeleteMouse';
+import Product from './pages/laptop/Product';
+import Mouse from './pages/mouse/Mouse';
+import ProductDetail from './pages/laptop/ProductDetail';
+import MouseDetail from './pages/mouse/MouseDetail';
+import NewProduct from './pages/laptop/NewProduct';
+import NewMouse from './pages/mouse/NewMouse';
+import EditProduct from './pages/laptop/EditProduct';
+import EditMouse from './pages/mouse/EditMouse';
+import DeleteProduct from './pages/laptop/DeleteProduct';
+import DeleteMouse from './pages/mouse/DeleteMouse';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path='/mouse' element={<Mouse/>}/>
       <Route path='/mouse/:id' element={<MouseDetail/>}/>
       <Route path='/mouse/new' element={<NewMouse/>}/>
+      <Route path='/contact' element={<Contact/>}/>
     </Routes>
   );
 }

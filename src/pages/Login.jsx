@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import UserService from "../services/UserService";
 import { useNavigate } from "react-router-dom";
+import "../pages/csslogin/login.css";
 import swal from "sweetalert";
 
 const Login = () => {
@@ -42,47 +43,47 @@ const Login = () => {
   };
   return (
     <MainLayout>
-      <h2 className="mt-3">Login</h2>
+      <h2 className="mt-3">Sign In</h2>
       <hr />
-      <div className="row">
-        <div className="col-md-6 offset-md-3">
+      <div className="display-login">
+        <div className="wrapper">
+          <div className="title">🔒 Sign In</div>
           <form onSubmit={doLogin}>
-            <div className="mb-3 row">
-              <label htmlFor="inputName" className="col-4 col-form-label">
-                E-mail
-              </label>
-              <div className="col-8">
-                <input
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="xxx@yyy.com"
-                  onChange={handleInputChange}
-                />
+            <div className="field">
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                id="email"
+                placeholder="xxx@yyy.com"
+                onChange={handleInputChange}
+              />
+              <label>Email</label>
+            </div>
+
+            <div className="field">
+              <input
+                type="password"
+                className="form-control"
+                name="password"
+                id="password"
+                placeholder="Your password"
+                onChange={handleInputChange}
+              />
+              <label>Password</label>
+            </div>
+
+            <div className="content">
+              <div className="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <label htmlFor="remember-me">Remember me</label>
+              </div>
+              <div className="pass-link">
+                <a href="#">Forgot password?</a>
               </div>
             </div>
-            <div className="mb-3 row">
-              <label htmlFor="inputName" className="col-4 col-form-label">
-                Password
-              </label>
-              <div className="col-8">
-                <input
-                  type="password"
-                  className="form-control"
-                  name="password"
-                  id="password"
-                  placeholder="password"
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-            <div className="mb-3 row">
-              <div className="offset-sm-4 col-sm-8">
-                <button type="submit" className="btn btn-primary">
-                  Login
-                </button>
-              </div>
+            <div className="field">
+              <input type="submit" defaultValue="Login" />
             </div>
           </form>
         </div>

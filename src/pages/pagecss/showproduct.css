@@ -1,0 +1,157 @@
+h2 {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.all-products-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.product-main {
+  overflow: hidden;
+  background: #ffffff;
+  color: #21201e;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+  margin: 2rem;
+}
+
+.product-main .product-main-title,
+.product-main .product-main-price {
+  font-size: 18px;
+}
+
+.product-main:hover {
+  box-shadow: 5px 15px 25px #595959;
+}
+
+.product-main img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.product-main a:link,
+.product-main a:visited {
+  color: #ececec;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2c3e50;
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.product-main a:hover {
+  transform: scale(1.1);
+}
+
+
+/* slider */
+/* .row{
+  padding-top: 7rem;
+} */
+.product {
+  overflow: hidden;
+  width: 255px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #f0f2f3;
+  box-shadow: 0 3px 24px rgba(0, 0, 0, 0 / 4%);
+  border-radius: 8px;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: auto;
+}
+
+.titel h6 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #18181D;
+}
+
+.price {
+  margin: 15px 0;
+}
+
+.price span {
+  color: #18181D;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-custom {
+  cursor: pointer;
+  text-align: center;
+  background-color: #b6ab11;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px 30px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.btn .primary {
+  color: #fff;
+}
+
+.btn .primary:hover {
+  background-color: #3c3c3c;
+}
+
+.btn .second {
+  background-color: #fff;
+  color: #b9ab11;
+}
+
+.slider {
+  padding-bottom: 1rem;
+  padding: 0 3rem;
+}
+
+.product-body:hover {
+  box-shadow: 5px 15px 25px #595959;
+}
+
+
+/* Product pages */
+.menu-product-main {
+  display: flex;
+  margin-left: 6.5rem;
+}
+
+.menu-product-main li {
+  list-style: none;
+  text-decoration: none;
+
+}
+
+.mouse {
+  padding-left: 2rem;
+}

@@ -37,85 +37,68 @@ const Register = () => {
   };
   return (
     <MainLayout>
-      <h2 className="mt-3">Register</h2>
+      <h2 className="mt-3">Sign Up</h2>
       <hr />
-      <div className="row">
-        <div className="col-md-8 offset-md-2">
-          <div className="container">
-            <form onSubmit={saveRegister}>
-              <div className="mb-3 row">
-                <label htmlFor="inputName" className="col-4 col-form-label">
-                  Name
+      <div className="display-login">
+        <div className="wrapper">
+          <div className="title">🔒 Sign Up</div>
+          <form onSubmit={saveRegister}>
+            <div className="field">
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                id="name"
+                placeholder="name"
+                onChange={handleInputChange}
+              />
+              <label>Name</label>
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                className="form-control"
+                name="email"
+                id="email"
+                placeholder="xxx@yyy.com"
+                onChange={handleInputChange}
+              />
+              <label>Email</label>
+            </div>
+            <div className="field">
+              <input
+                type="password"
+                className="form-control"
+                name="password"
+                id="password"
+                placeholder="password"
+                onChange={handleInputChange}
+              />
+              <label>Password</label>
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                className="form-control"
+                name="phone_number"
+                id="phone_number"
+                placeholder="xxx-xxx-xxxx"
+                onChange={handleInputChange}
+              />
+              <label>Phone number</label>
+            </div>
+            <div className="content">
+              <div className="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <label htmlFor="remember-me">
+                  Agree to terms and conditions
                 </label>
-                <div className="col-8">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="name"
-                    id="name"
-                    placeholder="name"
-                    onChange={handleInputChange}
-                  />
-                </div>
               </div>
-
-              <div className="mb-3 row">
-                <label htmlFor="inputName" className="col-4 col-form-label">
-                  Email
-                </label>
-                <div className="col-8">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="xxx@yyy.com"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-
-              <div className="mb-3 row">
-                <label htmlFor="password" className="col-4 col-form-label">
-                  Password
-                </label>
-                <div className="col-8">
-                  <input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    id="password"
-                    placeholder="password"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-
-              <div className="mb-3 row">
-                <label htmlFor="inputName" className="col-4 col-form-label">
-                  Phone number
-                </label>
-                <div className="col-8">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="phone_number"
-                    id="phone_number"
-                    placeholder="xxx-xxx-xxxx"
-                    onChange={handleInputChange}
-                  />
-                </div>
-              </div>
-
-              <div className="mb-3 row">
-                <div className="offset-sm-4 col-sm-8">
-                  <button type="submit" className="btn btn-primary">
-                    Create Account
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div className="field">
+              <input type="submit" />
+            </div>
+          </form>
         </div>
       </div>
     </MainLayout>

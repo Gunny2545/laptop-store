@@ -1,32 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-
+import React from 'react'
+import './Navbar.css'
+import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
+    <nav className="navbar ">
       <div className="container">
-        <NavLink className="navbar-brand" to="/">
-          <h2>Laptop Store</h2>
-        </NavLink>
-        <button
-          className="navbar-toggler d-lg-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="collapsibleNavId">
-          <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link active" to="/" aria-current="page">
-                Home <span className="visually-hidden">(current)</span>
-              </NavLink>
-            </li>
-            <li className="nav-item dropdown">
+        <h3 className="logo">𝙇𝘼𝙋𝙏𝙊𝙋 ✯ 𝙎𝙏𝙊𝙍𝙀™</h3>
+
+        <ul className="nav-links">
+          <li>
+            <NavLink className="nav-link" to="/">
+            Home
+            </NavLink>
+          </li>
+          <li className="nav-item dropdown">
               <NavLink
                 className="nav-link dropdown-toggle"
                 id="productDropdownId"
@@ -50,29 +37,28 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-
-            <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                id="dropdownId"
-                data-bs-toggle="dropdown"
-              >
-                User
-              </span>
-              <div className="dropdown-menu" aria-labelledby="dropdownId">
-                <NavLink className="dropdown-item" to="/login">
-                ▸ Login
-                </NavLink>
-                <NavLink className="dropdown-item" to="/register">
-                ▸ Register
-                </NavLink>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <NavLink className="nav-link" to="/contact">
+              Contact
+            </NavLink>
+          </li>
+          <div className="login">
+          <li> 
+            <NavLink className="nav-link" to="/login">
+              Sing In
+            </NavLink>
+          </li>
+          <li> 
+            <NavLink className="nav-link" to="/register">
+              Sing Up
+            </NavLink>
+          </li>
+          </div>
+         
+        </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
