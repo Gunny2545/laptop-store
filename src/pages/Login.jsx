@@ -30,6 +30,7 @@ const Login = () => {
             icon: "warning",
             title: "Result",
           });
+          navigate("/login");
         }
         console.log(res.data);
       })
@@ -38,6 +39,7 @@ const Login = () => {
           icon: "warning",
           title: "Result",
         });
+        navigate("/login");
         console.log(err);
       });
   };

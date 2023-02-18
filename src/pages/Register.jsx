@@ -26,6 +26,7 @@ const Register = () => {
             text: "Register failed",
             title: "Result",
           });
+          navigate("/register");
           console.log(e);
         });
     }
