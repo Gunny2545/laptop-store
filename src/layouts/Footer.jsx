@@ -6,7 +6,7 @@ const Footer = () => {
       <footer id="footer">
         <p className="copy">
           &copy;{new Date().getFullYear()} React-Project Design and Develop By
-          𝙇𝘼𝙋𝙏𝙊𝙋 ✯ 𝙎𝙏𝙊𝙍𝙀™
+          𝙇𝘼𝙋𝙏𝙊𝙋 | 𝙎𝙏𝙊𝙍𝙀™
         </p>
       </footer>
     </div>

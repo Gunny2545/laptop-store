@@ -24,7 +24,7 @@ const Product = () => {
 
   return (
     <MainLayout>
-      <h2 className="mt-3">Laptop</h2>
+      <h2 className="mt-3">𝗟𝗮𝗽𝘁𝗼𝗽</h2>
       <hr />
       <div className="row">
         <div className="col d-flex justify-content-end">

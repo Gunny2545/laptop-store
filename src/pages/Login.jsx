@@ -43,11 +43,11 @@ const Login = () => {
   };
   return (
     <MainLayout>
-      <h2 className="mt-3">Sign In</h2>
+      <h2 className="mt-3">𝗦𝗶𝗴𝗻 𝗜𝗻</h2>
       <hr />
       <div className="display-login">
         <div className="wrapper">
-          <div className="title">🔒 Sign In</div>
+          <div className="title">🔒 เข้าสู่ระบบ</div>
           <form onSubmit={doLogin}>
             <div className="field">
               <input

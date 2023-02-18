@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import MouseService from "../../services/MouseService";
 import { NavLink } from "react-router-dom";
-import logo from "./logo.svg";
+import KUY from "./logo.svg";
 
 const Mouse = () => {
   const [products, setProducts] = useState([]);
@@ -24,7 +24,7 @@ const Mouse = () => {
 
   return (
     <MainLayout>
-      <h2 className="mt-3">Mouse</h2>
+      <h2 className="mt-3">𝗠𝗼𝘂𝘀𝗲</h2>
       <hr />
       <div className="row">
         <div className="col d-flex justify-content-end">
@@ -48,7 +48,7 @@ const ProductList = (props) => {
     <div className="col">
       <div className="card">
         <div className="card-body">
-          <img src={logo} alt="" />
+          <img src={KUY} alt="" />
           <div className="card-text">
             <h5>{props.product.mousebrand}</h5>
             <h6>{props.product.mousemodel}</h6>

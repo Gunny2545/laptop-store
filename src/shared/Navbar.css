@@ -30,12 +30,13 @@ ul li {
 
 .nav-links li a{
     color: black;
-    font-size: 17px;
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 0 7px;
     margin: 0 1px;
     cursor: pointer;
     text-transform: capitalize;
     text-decoration: none;
+    font-weight: bold;
     /* box-shadow: 0 .1rem .3rem rgba(58, 54, 54, 0.3); */
     transition: all 0.2s ease-in-out;
 }
@@ -54,4 +55,12 @@ ul li a:hover{
     box-shadow: 0 .1rem .3rem rgba(58, 54, 54, 0.3);
 }
 
-
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+  }
+  

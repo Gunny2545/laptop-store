@@ -58,6 +58,12 @@ const ProductDetail = () => {
           </p>
           <p>
             <label htmlFor="" className="lblStyle">
+              Meodel :{" "}
+            </label>{" "}
+            {product.model}
+          </p>
+          <p>
+            <label htmlFor="" className="lblStyle">
               Display :{" "}
             </label>{" "}
             {product.display}

@@ -37,11 +37,11 @@ const Register = () => {
   };
   return (
     <MainLayout>
-      <h2 className="mt-3">Sign Up</h2>
+      <h2 className="mt-3">𝗦𝗶𝗴𝗻 𝗨𝗽</h2>
       <hr />
       <div className="display-login">
         <div className="wrapper">
-          <div className="title">🔒 Sign Up</div>
+          <div className="title">🔒 สมัครสมาชิก</div>
           <form onSubmit={saveRegister}>
             <div className="field">
               <input

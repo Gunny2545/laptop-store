@@ -58,6 +58,12 @@ const MouseDetail = () => {
           </p>
           <p>
             <label htmlFor="" className="lblStyle">
+              Model :{" "}
+            </label>{" "}
+            {product.mousemodel}
+          </p>
+          <p>
+            <label htmlFor="" className="lblStyle">
               Connection :{" "}
             </label>{" "}
             {product.wired_wireless}
