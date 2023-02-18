@@ -42,6 +42,21 @@ const NewProduct = () => {
         <div classname="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
+            <div className="mb-3 row">
+                <label htmlFor="inputName" className="col-4 col-form-label">
+                  Product type
+                </label>
+                <div className="col-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="type"
+                    id="type"
+                    placeholder="Product type"
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
               <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Brand

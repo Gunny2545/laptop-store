@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../shared/Navbar";
 import Footer from "./Footer";
-
+import './mainlayout.css'
 const MainLayout = ({ children }) => {
   return (
     <>

@@ -21,7 +21,7 @@ const ShowProduct = () => {
             >
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63ec9a8d4ff0b0bc3538d1b5">
+                  <a href="http://localhost:3000/product/63f0f089c1c2fb6bc8789cc8">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0149146/A0149146_2.jpg"
                       alt=""
@@ -41,7 +41,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63ec9c44c3a2c7c8b65a9d2b">
+                  <a href="http://localhost:3000/product/63f0f1dcc1c2fb6bc8789d01">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0146394/A0146394_2.jpg"
                       alt=""
@@ -61,7 +61,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63ecd83d4b04693ce5b4933d">
+                  <a href="http://localhost:3000/product/63f0f2bcc1c2fb6bc8789d11">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0146685/A0146685_2.jpg"
                       alt=""
@@ -81,7 +81,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63ecd8d673e2b43cb3b42e57">
+                  <a href="http://localhost:3000/product/63f0f304c1c2fb6bc8789d15">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0146686/A0146686_2.jpg"
                       alt=""
@@ -101,7 +101,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63f06bd39a8b7bea665f4994">
+                  <a href="http://localhost:3000/product/63f0f3cec1c2fb6bc8789d1f">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0144692/A0144692_2.jpg"
                       alt=""
@@ -111,7 +111,7 @@ const ShowProduct = () => {
                 <div className="product-body">
                   <div className="title">
                     <hr />
-                    <h6>LENOVO</h6>
+                    <h6>Lenovo</h6>
                   </div>
                   <div className="price">
                     <span>IdeaPad Gaming 3 15IAH7</span>
@@ -121,7 +121,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63f06bd79a8b7bea665f49a2">
+                  <a href="http://localhost:3000/product/63f0f45cc1c2fb6bc8789d25">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0147410/A0147410_2.jpg"
                       alt=""
@@ -131,7 +131,7 @@ const ShowProduct = () => {
                 <div className="product-body">
                   <div className="title">
                     <hr />
-                    <h6>LENOVO</h6>
+                    <h6>Lenovo</h6>
                   </div>
                   <div className="price">
                     <span>Legion 5 15IAH7H</span>
@@ -141,7 +141,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63f06be99a8b7bea665f49b0">
+                  <a href="http://localhost:3000/product/63f0f4fac1c2fb6bc8789d2d">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0149151/A0149151_2.jpg"
                       alt=""
@@ -161,7 +161,7 @@ const ShowProduct = () => {
 
               <div className="product">
                 <div className="product-thumb">
-                  <a href="http://localhost:3000/product/63f06bed9a8b7bea665f49be">
+                  <a href="http://localhost:3000/product/63f0f562c1c2fb6bc8789d33">
                     <img
                       src="https://img.advice.co.th/images_nas/pic_product4/A0149153/A0149153_2.jpg"
                       alt=""

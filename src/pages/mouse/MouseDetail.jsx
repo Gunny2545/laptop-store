@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout";
-import MouseService from "../../services/MouseService";
+import ProductService from "../../services/ProductService";
 import logo from "./logo.svg";
 
 const MouseDetail = () => {
@@ -18,7 +18,7 @@ const MouseDetail = () => {
   const saveReview = (e) => {
     e.preventDefault();
     console.log(review);
-    MouseService.addReview(id, review)
+    ProductService.addReview(id, review)
       .then((res) => {
         fetchProduct();
       })
@@ -33,7 +33,7 @@ const MouseDetail = () => {
   };
 
   const fetchProduct = () => {
-    MouseService.get(params.id)
+    ProductService.get(params.id)
       .then((res) => {
         setProduct(res.data.data);
         console.log(res);

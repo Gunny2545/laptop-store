@@ -6,7 +6,8 @@ import swal from "sweetalert";
 
 const Register = () => {
   const navigate = useNavigate();
-  let [register, setRegister] = useState({});
+  const [register, setRegister] = useState({});
+  const [errorMessage, setErrorMessage] = useState("");
 
   const saveRegister = (e) => {
     e.preventDefault();
@@ -21,12 +22,11 @@ const Register = () => {
           navigate("/login");
         })
         .catch((e) => {
-          swal({
-            icon: "error",
-            text: "Register failed",
-            title: "Result",
-          });
-          navigate("/register");
+          if (e.response && e.response.status === 409) {
+            setErrorMessage("Email already in use or Some information is missing.");
+          } else {
+            setErrorMessage("Email already in use or Some information is missing.");
+          }
           console.log(e);
         });
     }
@@ -36,6 +36,7 @@ const Register = () => {
     const { name, value } = event.target;
     setRegister({ ...register, [name]: value });
   };
+
   return (
     <MainLayout>
       <h2 className="mt-3">𝗦𝗶𝗴𝗻 𝗨𝗽</h2>
@@ -43,6 +44,9 @@ const Register = () => {
       <div className="display-login">
         <div className="wrapper">
           <div className="title">🔒 สมัครสมาชิก</div>
+          {errorMessage && (
+            <div className="alert alert-danger">{errorMessage}</div>
+          )}
           <form onSubmit={saveRegister}>
             <div className="field">
               <input

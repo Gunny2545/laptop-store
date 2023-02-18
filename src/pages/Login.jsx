@@ -7,7 +7,8 @@ import swal from "sweetalert";
 
 const Login = () => {
   const navigate = useNavigate();
-  let [loginData, setLoginData] = useState({});
+  const [loginData, setLoginData] = useState({});
+  const [loginError, setLoginError] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -30,7 +31,10 @@ const Login = () => {
             icon: "warning",
             title: "Result",
           });
-          navigate("/login");
+          setLoginError(true);
+          setTimeout(() => {
+            setLoginError(false);
+          }, 5000); // wait 5 seconds before allowing user to attempt login again
         }
         console.log(res.data);
       })
@@ -39,10 +43,14 @@ const Login = () => {
           icon: "warning",
           title: "Result",
         });
-        navigate("/login");
         console.log(err);
+        setLoginError(true);
+        setTimeout(() => {
+          setLoginError(false);
+        }, 5000); // wait 5 seconds before allowing user to attempt login again
       });
   };
+
   return (
     <MainLayout>
       <h2 className="mt-3">𝗦𝗶𝗴𝗻 𝗜𝗻</h2>
@@ -88,6 +96,11 @@ const Login = () => {
               <input type="submit" defaultValue="Login" />
             </div>
           </form>
+          {loginError && (
+            <div className="alert alert-danger mt-3" role="alert">
+              Bad login. Please try again after 5 seconds.
+            </div>
+          )}
         </div>
       </div>
     </MainLayout>

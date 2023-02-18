@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import MouseService from "../../services/MouseService";
-import swal from "sweetalert";
-import Mouse from "./Mouse";
+import React, { useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import ProductService from '../../services/ProductService'
+import swal from 'sweetalert'
+import Mouse from './Mouse'
 
 const DeleteMouse = () => {
   let navigate = useNavigate();
@@ -19,7 +19,7 @@ const DeleteMouse = () => {
     })
       .then((willDelete) => {
         if (willDelete) {
-          MouseService.deleteProduct(id)
+          ProductService.deleteProduct(id)
             .then((res) => {
               swal("The product has been deleted!", {
                 icon: "success",

@@ -42,7 +42,9 @@ const Product = () => {
   );
 };
 
-const ProductList = (props) => {
+const ProductList = (props) => {if (props.product.type !== 'laptop') {
+  return null;
+}
   console.log(props);
   return (
     <div className="col">

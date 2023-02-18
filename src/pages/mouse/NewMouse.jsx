@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import MouseService from "../../services/MouseService";
+import ProductService from "../../services/ProductService";
 import MainLayout from "../../layouts/MainLayout";
 import swal from "sweetalert";
 
@@ -10,7 +10,7 @@ const NewMouse = () => {
 
   const saveProduct = (e) => {
     e.preventDefault();
-    MouseService.create(product)
+    ProductService.create(product)
       .then((res) => {
         swal({
           icon: "success",
@@ -33,6 +33,7 @@ const NewMouse = () => {
     const { name, value } = event.target;
     setProduct({ ...product, [name]: value });
   };
+
   return (
     <MainLayout>
       <h2 className="mt-3">Add a new product</h2>
@@ -41,6 +42,22 @@ const NewMouse = () => {
         <div className="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
+              <div className="mb-3 row">
+                <label htmlFor="inputName" className="col-4 col-form-label">
+                  Product type
+                </label>
+                <div className="col-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="type"
+                    id="type"
+                    placeholder="Product type"
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
               <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Brand

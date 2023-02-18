@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
-import MouseService from "../../services/MouseService";
+import ProductService from "../../services/ProductService";
 import { NavLink } from "react-router-dom";
-import KUY from "./logo.svg";
+import logo from "./logo.svg";
 
 const Mouse = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +12,7 @@ const Mouse = () => {
   }, []);
 
   const fetchProducts = () => {
-    MouseService.getAll()
+    ProductService.getAll()
       .then((res) => {
         setProducts(res.data.data);
         console.log(res.data.data);
@@ -42,13 +42,15 @@ const Mouse = () => {
   );
 };
 
-const ProductList = (props) => {
+const ProductList = (props) => {if (props.product.type !== 'mouse') {
+  return null;
+}
   console.log(props);
   return (
     <div className="col">
       <div className="card">
         <div className="card-body">
-          <img src={KUY} alt="" />
+          <img src={logo} alt="" />
           <div className="card-text">
             <h5>{props.product.mousebrand}</h5>
             <h6>{props.product.mousemodel}</h6>

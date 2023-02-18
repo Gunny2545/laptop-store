@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout";
-import MouseService from "../../services/MouseService";
+import ProductService from "../../services/ProductService";
 import swal from "sweetalert";
 
 const EditMouse = () => {
@@ -14,7 +14,7 @@ const EditMouse = () => {
     fetchProduct();
   }, []);
   const fetchProduct = () => {
-    MouseService.get(params.id)
+    ProductService.get(params.id)
       .then((res) => {
         setProduct(res.data.data);
         console.log(res);
@@ -26,7 +26,7 @@ const EditMouse = () => {
 
   const saveProduct = (e) => {
     e.preventDefault();
-    MouseService.update(id, product)
+    ProductService.update(id, product)
       .then((res) => {
         swal({
           icon: "success",
@@ -55,7 +55,7 @@ const EditMouse = () => {
       <h2 className="mt-3">Edit product</h2>
       <hr />
       <div className="row">
-        <div classname="col-md-8 offset-md-2">
+        <div className="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
               <div className="mb-3 row">
@@ -102,7 +102,7 @@ const EditMouse = () => {
                     className="form-control"
                     name="wired_wireless"
                     id="wired_wireless"
-                    placeholder="Display"
+                    placeholder="wired / wireless"
                     onChange={handleInputChange}
                     value={product.wired_wireless}
                   />
