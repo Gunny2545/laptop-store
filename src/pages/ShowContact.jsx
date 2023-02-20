@@ -25,13 +25,7 @@ const ShowContact = () => {
     <MainLayout>
       <h2 className="mt-3">𝗔𝗹𝗹 𝗺𝗲𝘀𝘀𝗮𝗴𝗲</h2>
       <hr />
-      <div className="row">
-        {/* <div className="d-flex justify-content-end">
-          <NavLink to="/contact" className="btn btn-success">
-            Contact
-          </NavLink>
-        </div> */}
-      </div>
+      <div className="row"></div>
       <div className="row mt-2 row-cols-lg-1 row-cols-3 g-2">
         {contacts.map((p) => (
           <ContactList key={p._id} contact={p} />
@@ -48,7 +42,14 @@ const ContactList = (props) => {
       <div className="card">
         <div className="card-body">
           <div className="card-text">
-            <h6>Name : {props.contact.cname.replace(/.(?=.{2})/g, "*")}</h6>
+            <h6>
+              Name :{" "}
+              {props.contact.cname.substring(0, 1) +
+                props.contact.cname
+                  .substring(1, props.contact.cname.length - 1)
+                  .replace(/./g, "*") +
+                props.contact.cname.substring(props.contact.cname.length - 1)}
+            </h6>
 
             <h6>
               Email :{" "}

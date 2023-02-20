@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import ProductService from "../../services/ProductService";
 import { NavLink } from "react-router-dom";
-import logo from "./logo.svg";
 
 const Mouse = () => {
   const [products, setProducts] = useState([]);
@@ -50,7 +49,7 @@ const ProductList = (props) => {if (props.product.type !== 'mouse') {
     <div className="col">
       <div className="card">
         <div className="card-body">
-          <img src={logo} alt="" />
+        <img src={props.product.image} alt="" style={{ width: "200px", height: "200px" }}/>
           <div className="card-text">
             <h5>{props.product.mousebrand}</h5>
             <h6>{props.product.mousemodel}</h6>

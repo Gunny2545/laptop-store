@@ -63,7 +63,7 @@ const Contact = () => {
                 className="form-control"
                 name="cname"
                 id="cname"
-                placeholder="Name"
+                placeholder="name"
                 value={contact.cname || ""}
                 onChange={handleInputChange}
               />
@@ -72,7 +72,7 @@ const Contact = () => {
                 className="form-control"
                 name="cemail"
                 id="cemail"
-                placeholder="Email"
+                placeholder="email"
                 value={contact.cemail || ""}
                 onChange={handleInputChange}
               />
@@ -81,7 +81,7 @@ const Contact = () => {
                 className="form-control"
                 name="cphone_number"
                 id="cphone_number"
-                placeholder="Phone number"
+                placeholder="phone number"
                 value={contact.cphone_number || ""}
                 onChange={handleInputChange}
               />

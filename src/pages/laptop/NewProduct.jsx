@@ -52,7 +52,7 @@ const NewProduct = () => {
                     className="form-control"
                     name="type"
                     id="type"
-                    placeholder="Product type"
+                    placeholder="laptop / mouse"
                     onChange={handleInputChange}
                   />
                 </div>

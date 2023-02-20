@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout";
 import ProductService from "../../services/ProductService";
-import logo from "./logo.svg";
 
 const MouseDetail = () => {
   let params = useParams();
@@ -47,7 +46,7 @@ const MouseDetail = () => {
       <h2 className="mt-3">{product.mousebrand}</h2>
       <div className="row mt-3">
         <div className="col-md-4">
-          <img src={logo} alt="" />
+        <img src={product.image} alt="" style={{ width: "400px", height: "400px" }}/>
         </div>
         <div className="col-md-8 border p-4">
           <p>

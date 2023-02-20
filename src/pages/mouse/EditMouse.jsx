@@ -58,6 +58,23 @@ const EditMouse = () => {
         <div className="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
+            <div className="mb-3 row">
+                <label htmlFor="inputName" className="col-4 col-form-label">
+                  Picture
+                </label>
+                <div className="col-8">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="image"
+                    id="image"
+                    placeholder="picture url"
+                    onChange={handleInputChange}
+                    value={product.image}
+                  />
+                </div>
+              </div>
+              
               <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Brand
