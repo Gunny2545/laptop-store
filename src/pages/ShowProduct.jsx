@@ -1,10 +1,29 @@
-import React, { Fragment } from "react";
+import React, { useState, useEffect ,Fragment } from "react";
 import "../pages/pagecss/showproduct.css";
 import Carousel from "react-elastic-carousel";
 import ShowMouse from "./ShowMouse";
+import { NavLink } from "react-router-dom";
+import ProductService from "../services/ProductService";
 
 const breakPoints = [{ with: 1200, itemsToShow: 3 }];
 const ShowProduct = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = () => {
+    ProductService.getAll()
+      .then((res) => {
+        setProducts(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+  
   return (
     <>
       <Fragment>
