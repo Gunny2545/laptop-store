@@ -10,9 +10,11 @@ import EditProduct from './pages/laptop/EditProduct';
 import EditMouse from './pages/mouse/EditMouse';
 import DeleteProduct from './pages/laptop/DeleteProduct';
 import DeleteMouse from './pages/mouse/DeleteMouse';
+import DeleteContact from './pages/DeleteContact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Contact from './pages/Contact';
+import ShowContact from './pages/ShowContact';
 
 function App() {
   return (
@@ -25,12 +27,14 @@ function App() {
       <Route path='/mouse/edit/:id' element={<EditMouse/>}/>
       <Route path='/product/delete/:id' element={<DeleteProduct/>}/>
       <Route path='/mouse/delete/:id' element={<DeleteMouse/>}/>
+      <Route path='/contact/delete/:id' element={<DeleteContact/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/mouse' element={<Mouse/>}/>
       <Route path='/mouse/:id' element={<MouseDetail/>}/>
       <Route path='/mouse/new' element={<NewMouse/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/showcontact' element={<ShowContact/>}/>
     </Routes>
   );
 }

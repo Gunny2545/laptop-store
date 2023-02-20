@@ -63,13 +63,13 @@ const ProductList = (props) => {if (props.product.type !== 'laptop') {
             <h6>in stock : {props.product.unit_in_stock}</h6>
             <NavLink
               to={"/product/" + props.product._id}
-              className="btn btn-primary"
+              className="btn btn-secondary"
             >
               Learn More
             </NavLink>{" "}
             <NavLink
               to={"/product/" + props.product._id}
-              className="btn btn-success"
+              className="btn btn-secondary"
             >
               Buy Now
             </NavLink>{" "}

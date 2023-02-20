@@ -3,6 +3,7 @@ import "./pagecss/contact.css";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import ContactService from "../services/ContactService";
+import { NavLink } from "react-router-dom";
 import swal from "sweetalert";
 
 const Contact = () => {
@@ -99,6 +100,11 @@ const Contact = () => {
                   <p>{message}</p>
                 </div>
               )}
+              <div className="mt-3">
+                <NavLink to={"/showcontact/"} className="btn btn-light">
+                  See message
+                </NavLink>{" "}
+              </div>
             </form>
           </div>
         </div>

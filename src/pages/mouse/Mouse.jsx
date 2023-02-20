@@ -63,13 +63,13 @@ const ProductList = (props) => {if (props.product.type !== 'mouse') {
             <h6>in stock : {props.product.mouseunit_in_stock}</h6>
             <NavLink
               to={"/mouse/" + props.product._id}
-              className="btn btn-primary"
+              className="btn btn-secondary"
             >
               Learn More
             </NavLink>{" "}
             <NavLink
               to={"/mouse/" + props.product._id}
-              className="btn btn-success"
+              className="btn btn-secondary"
             >
               Buy Now
             </NavLink>{" "}
