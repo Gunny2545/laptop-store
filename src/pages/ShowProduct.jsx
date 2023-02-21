@@ -4,7 +4,6 @@ import Carousel from "react-elastic-carousel";
 import ShowMouse from "./ShowMouse";
 import { NavLink } from "react-router-dom";
 import ProductService from "../services/ProductService";
-import logo from "./logo.svg";
 
 const breakPoints = [{ width: 1200, itemsToShow: 3 }];
 
@@ -29,14 +28,14 @@ const ShowProduct = () => {
   return (
     <Fragment>
       <section>
-        <h2 className="mt-3">𝗡𝗲𝘄 𝗟𝗮𝗽𝘁𝗼𝗽</h2>
         <hr />
+        <h2 className="mt-3">𝗡𝗲𝘄 𝗟𝗮𝗽𝘁𝗼𝗽</h2>
         <div className="row mt-5">
           <Carousel
             breakPoints={{ ...breakPoints }}
             className="slider"
             enableAutoPlay={true}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={4000}
             infiniteLoop={true}
           >
             {products.map((product) => {
@@ -44,26 +43,26 @@ const ShowProduct = () => {
                 return null;
               }
               return (
-                <div className="product" key={product._id}>
+                <div className="slider" key={product._id}>
                   <div className="product-thumb">
                     <NavLink to={`/product/${product._id}`}>
-                      <img src={product.image} alt="" />
+                      <img src={product.image} alt="" style={{ width: "400px", height: "400px" }}/>
                     </NavLink>
                   </div>
-                  <div className="product">
+                  <div className="product-body">
                     <div className="title">
-                      <hr />
-                      <h6>{product.brand}</h6>
+                      <h5>{product.brand}</h5>
                     </div>
-                    <div className="price">
-                      <span>{product.model}</span>
+                    <div className="bottom">
+                      <h6>{product.model}</h6><hr />
+                      <p>{product.processor} , {product.memory} , {product.storage}</p>
                     </div>
                   </div>
                 </div>
               );
             })}
           </Carousel>
-          <ShowMouse/>
+          <ShowMouse />
         </div>
       </section>
     </Fragment>

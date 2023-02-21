@@ -46,7 +46,11 @@ const ProductDetail = () => {
       <h2 className="mt-3">{product.brand}</h2>
       <div className="row mt-3">
         <div className="col-md-4">
-        <img src={product.image} alt="" style={{ width: "400px", height: "400px" }}/>
+          <img
+            src={product.image}
+            alt=""
+            style={{ width: "450px", height: "450px" }}
+          />
         </div>
         <div className="col-md-8 border p-4">
           <p>
@@ -109,9 +113,10 @@ const ProductDetail = () => {
             </label>{" "}
             {product.unit_in_stock}
           </p>
+          <hr />
           <p>
             <label htmlFor="" className="lblStyle">
-              Description:{" "}
+              Description :{" "}
             </label>{" "}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
             expedita doloremque aliquid a hic est necessitatibus iusto mollitia,

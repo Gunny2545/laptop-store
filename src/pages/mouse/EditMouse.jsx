@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout";
 import ProductService from "../../services/ProductService";
@@ -58,7 +58,7 @@ const EditMouse = () => {
         <div className="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
-            <div className="mb-3 row">
+              <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Picture
                 </label>
@@ -74,7 +74,7 @@ const EditMouse = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Brand

@@ -41,15 +41,20 @@ const Product = () => {
   );
 };
 
-const ProductList = (props) => {if (props.product.type !== 'laptop') {
-  return null;
-}
+const ProductList = (props) => {
+  if (props.product.type !== "laptop") {
+    return null;
+  }
   console.log(props);
   return (
     <div className="col">
       <div className="card">
         <div className="card-body">
-          <img src={props.product.image} alt="" style={{ width: "200px", height: "200px" }}/>
+          <img
+            src={props.product.image}
+            alt=""
+            style={{ width: "200px", height: "200px" }}
+          />
           <div className="card-text">
             <h5>{props.product.brand}</h5>
             <h6>{props.product.model}</h6>

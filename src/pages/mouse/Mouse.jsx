@@ -41,15 +41,20 @@ const Mouse = () => {
   );
 };
 
-const ProductList = (props) => {if (props.product.type !== 'mouse') {
-  return null;
-}
+const ProductList = (props) => {
+  if (props.product.type !== "mouse") {
+    return null;
+  }
   console.log(props);
   return (
     <div className="col">
       <div className="card">
         <div className="card-body">
-        <img src={props.product.image} alt="" style={{ width: "200px", height: "200px" }}/>
+          <img
+            src={props.product.image}
+            alt=""
+            style={{ width: "200px", height: "200px" }}
+          />
           <div className="card-text">
             <h5>{props.product.mousebrand}</h5>
             <h6>{props.product.mousemodel}</h6>

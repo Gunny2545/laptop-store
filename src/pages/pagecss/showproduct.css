@@ -85,13 +85,8 @@ h2 {
   color: #18181D;
 }
 
-.price {
+.bottom {
   margin: 15px 0;
-}
-
-.price span {
-  color: #18181D;
-  font-weight: 700;
 }
 
 .footer {
@@ -133,7 +128,7 @@ h2 {
 }
 
 .product-body:hover {
-  box-shadow: 5px 15px 25px #595959;
+  box-shadow: 5px 5px 5px #595959;
 }
 
 
@@ -147,9 +142,5 @@ h2 {
   list-style: none;
   text-decoration: none;
 
-}
-
-.mouse {
-  padding-left: 2rem;
 }
 

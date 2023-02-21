@@ -9,23 +9,23 @@ const Home = () => {
       <div className="image-grid">
         <img
           className="image-grid-col-2 image-grid-row-2"
-          src="https://i.pinimg.com/564x/52/05/e4/5205e44a326c509a7e20b1baefbc7aed.jpg"
+          src="https://img.advice.co.th/images_nas/advice_activity/202302159659395554.jpg"
           alt="architecture"
         />
         <img
-          src="https://i.pinimg.com/564x/52/05/e4/5205e44a326c509a7e20b1baefbc7aed.jpg"
+          src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Snag_1abffcd6.png"
           alt="architecture"
         />
         <img
-          src="https://i.pinimg.com/564x/52/05/e4/5205e44a326c509a7e20b1baefbc7aed.jpg"
+          src="https://www.nvidia.com/content/dam/en-zz/Solutions/ces-2023/40-series-laptops/geforce-rtx-40-series-laptops-og-1200x630.jpg"
           alt="architecture"
         />
         <img
-          src="https://i.pinimg.com/564x/52/05/e4/5205e44a326c509a7e20b1baefbc7aed.jpg"
+          src="https://img.advice.co.th/images_nas/advice_activity/202211083378947624.jpg"
           alt="architecture"
         />
         <img
-          src="https://i.pinimg.com/564x/52/05/e4/5205e44a326c509a7e20b1baefbc7aed.jpg"
+          src="https://www.appdisqus.com/wp-content/uploads/2022/09/2022-08-29-image-18-1600x1025.jpg.webp"
           alt="architecture"
         />
       </div>

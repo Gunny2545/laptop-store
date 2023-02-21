@@ -42,7 +42,7 @@ const NewMouse = () => {
         <div className="col-md-8 offset-md-2">
           <div className="container">
             <form onSubmit={saveProduct}>
-            <div className="mb-3 row">
+              <div className="mb-3 row">
                 <label htmlFor="inputName" className="col-4 col-form-label">
                   Picture
                 </label>
