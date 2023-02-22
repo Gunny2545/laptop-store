@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MainLayout from "../layouts/MainLayout";
-import ContactService from "../services/ContactService";
+import MainLayout from "../../layouts/MainLayout";
+import ContactService from "../../services/ContactService";
 import { NavLink } from "react-router-dom";
 
 const ShowContact = () => {
@@ -61,7 +61,14 @@ const ContactList = (props) => {
 
             <hr />
             <h6>Message : {props.contact.cmessage}</h6>
-            <div className="d-flex justify-content-end">
+
+            <div className="card-text">
+              <NavLink
+                to={"/contact/" + props.contact._id}
+                className="btn btn-secondary"
+              >
+                Reply
+              </NavLink>{" "}
               <NavLink
                 to={"/contact/delete/" + props.contact._id}
                 className="btn btn-danger"

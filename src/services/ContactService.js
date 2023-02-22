@@ -19,11 +19,17 @@ const update = (id, contact) => {
 const deleteContact = (id) => {
   return http.delete(`/contact/${id}`)
 }
+const addReply = (id, reply) => {
+  console.log(`/contact/${id}`);
+  console.log(reply)
+  return http.patch(`/contact/${id}`, reply)
+}
 
 const ContactService = {
   getAll,
   get,
   create,
+  addReply,
   update,
   deleteContact
 }

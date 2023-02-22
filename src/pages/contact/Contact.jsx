@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./pagecss/contact.css";
+import "./contact.css";
 import { useNavigate } from "react-router-dom";
-import MainLayout from "../layouts/MainLayout";
-import ContactService from "../services/ContactService";
+import MainLayout from "../../layouts/MainLayout";
+import ContactService from "../../services/ContactService";
 import { NavLink } from "react-router-dom";
 import swal from "sweetalert";
 

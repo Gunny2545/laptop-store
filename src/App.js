@@ -10,11 +10,12 @@ import EditProduct from './pages/laptop/EditProduct';
 import EditMouse from './pages/mouse/EditMouse';
 import DeleteProduct from './pages/laptop/DeleteProduct';
 import DeleteMouse from './pages/mouse/DeleteMouse';
-import DeleteContact from './pages/DeleteContact';
+import DeleteContact from './pages/contact/DeleteContact';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Contact from './pages/Contact';
-import ShowContact from './pages/ShowContact';
+import Contact from './pages/contact/Contact';
+import ShowContact from './pages/contact/ShowContact';
+import ContactReply from './pages/contact/ContactReply';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Route path='/mouse/new' element={<NewMouse/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/showcontact' element={<ShowContact/>}/>
+      <Route path='/contact/:id' element={<ContactReply/>}/>
     </Routes>
   );
 }

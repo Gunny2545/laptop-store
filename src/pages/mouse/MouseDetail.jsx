@@ -113,7 +113,7 @@ const MouseDetail = () => {
         </div>
       </div>
       <div className="row mt-2">
-        <h3>Reviews of This Product</h3>
+        <h4>Reviews of this product.</h4>
         <hr />
         <div className="col">
           <div class="container">

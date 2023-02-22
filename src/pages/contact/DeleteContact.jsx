@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import ContactService from '../services/ContactService'
+import ContactService from '../../services/ContactService'
 import swal from 'sweetalert'
 import ShowContact from './ShowContact'
 
